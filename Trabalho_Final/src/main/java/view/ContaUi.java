@@ -24,7 +24,11 @@ import model.*;
 public class ContaUi extends javax.swing.JFrame {
 
     Conta conta;
-    File file = new File("C:\\Users\\Lenzi\\Downloads\\conta.csv");
+    File file = new File(
+            System.getProperty("user.home")
+                    + File.separator + "Downloads"
+                    + File.separator + "conta.csv"
+    );
 
     /**
      * Creates new form ContaUi
