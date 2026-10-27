@@ -24,8 +24,11 @@ import java.util.logging.Logger;
  */
 public class Conta {
 
-    
-    File file = new File("C:\\Users\\Lenzi\\Downloads\\conta.csv");
+
+    File file = new File(
+            System.getProperty("user.home")
+                    + File.separator + "Downloads"
+                    + File.separator + "conta.csv");
     private String titular;
     private ArrayList<Despesa> despesas;
     private ArrayList<Receita> receitas;
